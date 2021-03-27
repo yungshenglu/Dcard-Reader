@@ -37,7 +37,7 @@ export default function useFetchPostList(before: number) {
           .catch(() => {
             setIsError(true);
           });
-        }, 600);
+        }, 800);
     }
   }, [before]);
 

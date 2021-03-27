@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
 import view from '@V/index';
 import { IRoutes } from '@I/routes';
 import { routes } from './routes';
+
 
 const router = routes.map((route: IRoutes<any>) => { 
   return (

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+
 export const StyledItemExcerpt = styled.div`
   background: transparent;
   color: #000;

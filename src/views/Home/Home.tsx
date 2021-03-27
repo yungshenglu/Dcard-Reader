@@ -31,12 +31,14 @@ export function Home() {
     }
     observer.current = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting && hasMorePost) {
-        // console.log('node.dataset.id: ', node.dataset.id);
+        console.log('node.dataset.id: ', node.dataset.id);
         setBeforePostId(node.dataset.id);
       }
-    })
-    if (node) observer.current.observe(node)
-  }, [isLoading, hasMorePost])
+    });
+    if (node) {
+      observer.current.observe(node);
+    }
+  }, [isLoading, hasMorePost]);
 
   // Render
   return (

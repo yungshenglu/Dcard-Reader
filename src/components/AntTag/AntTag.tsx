@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-
 import { ATag } from '@P/antd';
+
 
 export function AntTag({ children, style, color }: any) {
   return (

@@ -1,7 +1,12 @@
 const file: { [key: string]: any } = {
-  fileList: [], // 當前資料夾檔名陣列
-  removeFileList: ['./index.ts'], // 將要移除的檔案名稱放到陣列
-  allFiles: null, // 資料夾中的檔案
+  /**
+   * fileList         : 當前資料夾檔名陣列
+   * removeFileList   : 將要移除的檔案名稱放到陣列
+   * allFiles         : 資料夾中的檔案
+   */
+  fileList: [],
+  removeFileList: ['./index.ts'], 
+  allFiles: null,
 
   // 取得當前資料夾下所有檔案
   getCurrFolderFiles() {
