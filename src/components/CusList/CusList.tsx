@@ -6,6 +6,7 @@ import { StyledList, StyledSpinContainer } from './style';
 
 
 export function CusList({ listData = [], isLoading = true, lastItemRef }: any) {
+  // console.log('listData: ', listData);
   const listLength = listData?.length;
 
   // Render
@@ -13,9 +14,7 @@ export function CusList({ listData = [], isLoading = true, lastItemRef }: any) {
     <StyledList>
       {
         isLoading
-        ? <StyledSpinContainer>
-            <AntSkeleton active/>
-          </StyledSpinContainer>
+        ? null
         : listData
           ? listData.map((item: any, index: number) => {
               if (index === listLength - 1) {

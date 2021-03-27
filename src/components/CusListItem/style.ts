@@ -3,6 +3,7 @@ import AntAvatar from '@C/AntAvatar';
 import AntBadge from '@C/AntBadge';
 import { StyledItemProps } from '@I/style';
 
+
 export const StyledListItem = styled.div<StyledItemProps>`
   backgroud: #FFFFFF;
   border-bottom: ${(prop) => prop.divider ? '1px solid #CCC' : 'none'};
