@@ -1,8 +1,14 @@
 # Release Notes
 
 ---
+## [v0.0.2](https://github.com/yungshenglu/Dcard-Reader/releases/tag/v0.0.2)
 
-## [v0.0.1 - Beta Release]()
+- Features
+  - Enable back-top button to the top of the list
+  - Enable error notification
+  - Code refactoring
+
+## [v0.0.1](https://github.com/yungshenglu/Dcard-Reader/releases/tag/v0.0.1)
 
 - Features
   - Enable to view the list of the latest popular posts

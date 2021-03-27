@@ -13,5 +13,5 @@ export default function useFetchPost(postId: number) {
     }
   );
 
-  return [{ data, isLoading: loading, error }, refetch]
+  return [{ data, isLoading: loading, isError: error !== null }, refetch]
 }

@@ -5,7 +5,7 @@ export function AntNotification({ ...props }: any) {
   return ANotification.error({
     message: props.messages,
     description: props.description
-  });
+  })
 };
 
 AntNotification.prototype = {
