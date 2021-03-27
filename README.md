@@ -39,19 +39,19 @@ This repository is my first practice to implement a simple post reader for [Dcar
    $ yarn build
    ```
    - It will take few second for ruuning above command
-   - You will get a new folder `dist/` after building successful
-   - You don't need to push `dist/` on your GitHub because `dist/` has already been ignored by git via `.gitignore`
+   - You will get a new folder `build/` after building successful
+   - You don't need to push `build/` on your GitHub because `build/` has already been ignored by git via `.gitignore`
 2. Before deploying, make sure you have already created your repository on GitHub
-3. Change the directory into `dist/` and create a new branch for deploying on your GitHub Pages
+3. Change the directory into `build/` and create a new branch for deploying on your GitHub Pages
    ```bash
-   $ cd dist/
-   # You need to initialize git due to dist/ is ignored as default
+   $ cd build/
+   # You need to initialize git due to build/ is ignored as default
    $ git init
-   $ git add -A
+   $ git add .
    $ git commit -m "Deploy on GitHub Pages"
    # Deploy to your GitHub repository on branch "gh-pages"
    $ git push -f https://github.com/yungshenglu/Dcard-Reader.git master:gh-pages
-   $ cd -
+   $ cd ..
    ```
 4. After deploying, you can find it on your GitHub with branch `gh-pages`
 5. Open setting page of your repository and move to the section `GitHub Pages`
