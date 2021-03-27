@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import AntNotification from '@C/AntNotification';
 import CusPostModal from '@C/CusPostModal';
 import useFetchPost from '@H/useFetchPost';
 import { StyledItemTitle } from './style';
@@ -7,7 +8,16 @@ import { StyledItemTitle } from './style';
 
 export function CusItemTitle({ content, id }: any) {
   const [modalVisible, setModalVisible] = useState(false);
-  const [{ data, isLoading, error }, refetch]: any = useFetchPost(id)
+  const [{ data, isLoading, isError }, refetch]: any = useFetchPost(id);
+
+  useEffect(() => {
+    if (isError) {
+      AntNotification({
+        message: '系統錯誤',
+        description: '目前連線異常，請稍後再試。'
+      });
+    }
+  }, [isError]);
 
   // Event handler
   const handleOpenModal = async () => {
@@ -29,7 +39,7 @@ export function CusItemTitle({ content, id }: any) {
         modalTitle={content}
         modalData={data}
         isLoading={isLoading}
-        error={error}
+        isError={isError}
         modalVisible={modalVisible}
         onCloseModal={handleCloseModal}
       />

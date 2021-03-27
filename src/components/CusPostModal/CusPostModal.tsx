@@ -16,7 +16,7 @@ export function CusPostModal({
   modalTitle,
   modalData,
   isLoading = true,
-  error,
+  isError=false,
   modalVisible = false,
   onCloseModal,
 }: any) {
@@ -71,7 +71,7 @@ export function CusPostModal({
         }
         visible={modalVisible}
         isLoading={isLoading}
-        error={error}
+        isError={isError}
         onCancel={onCloseModal}
       >
         <div>
@@ -89,7 +89,7 @@ CusPostModal.prototype = {
   modalTitle: PropTypes.node,
   modalData: PropTypes.object,
   isLoading: PropTypes.bool,
-  error: PropTypes.any,
+  isError: PropTypes.bool,
   modalVisible: PropTypes.bool,
   onCloseModal: PropTypes.func
 };

@@ -10,16 +10,16 @@ export function AntModal({
   title = '',
   visible = false,
   isLoading = true,
-  error = undefined,
+  isError = false,
   onCancel
 }: any) {
   const modalContent = useMemo(() => {
-    return error !== undefined
+    return !isError
       ? isLoading
         ? <AntSkeleton active />
         : children
       : <AntEmpty />;
-  }, [isLoading, error, children]);
+  }, [isLoading, isError, children]);
   
   // Render
   return (
@@ -45,6 +45,6 @@ AntModal.propTypes = {
   title: PropTypes.node,
   visible: PropTypes.bool,
   isLoading: PropTypes.bool,
-  error: PropTypes.any,
+  isError: PropTypes.bool,
   onCancel: PropTypes.func
 };

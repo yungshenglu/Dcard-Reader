@@ -1,11 +1,13 @@
 // Components
 export {
     Avatar as AAvatar,
+    BackTop as ABacktop,
     Badge as ABadge,
     Button as AButton,
     Col as ACol,
     Empty as AEmpty,
     Modal as AModal,
+    notification as ANotification,
     Layout as ALayout,
     Row as ARow,
     Skeleton as ASkeleton,
