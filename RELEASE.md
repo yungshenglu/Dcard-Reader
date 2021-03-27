@@ -1,6 +1,14 @@
 # Release Notes
 
 ---
+
+## [v0.0.3](https://github.com/yungshenglu/Dcard-Reader/releases/tag/v0.0.3)
+
+- Features
+  - Add the title for the list of the latest popular posts
+  - Fix bugs of the infinite scrolling
+  - Code refactoring
+
 ## [v0.0.2](https://github.com/yungshenglu/Dcard-Reader/releases/tag/v0.0.2)
 
 - Features

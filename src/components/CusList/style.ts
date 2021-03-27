@@ -5,8 +5,5 @@ export const StyledList = styled.div`
   height: 100%;
   background: #FFF;
   padding: 20px;
+  overflow-y: scroll;
 `;
-
-export const StyledSpinContainer = styled.div`
-  text-align: center;
-`
