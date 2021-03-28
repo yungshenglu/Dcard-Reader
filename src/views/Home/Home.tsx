@@ -26,15 +26,19 @@ export function Home() {
     if (isLoading) {
       return;
     }
+    // Disconnect previous observer when scolling out
     if (observer.current) {
       observer.current.disconnect();
     }
-    observer.current = new IntersectionObserver((entries) => {
+    // Callback when the target intersects with the viewport
+    const callback = (entries: any) => {
       if (entries[0].isIntersecting && hasMorePost) {
-        console.log('node.dataset.id: ', node.dataset.id);
         setBeforePostId(node.dataset.id);
       }
-    });
+    }
+    // Implement observer
+    observer.current = new IntersectionObserver(callback);
+    // Observe the target
     if (node) {
       observer.current.observe(node);
     }
