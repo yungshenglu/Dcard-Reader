@@ -9,7 +9,8 @@ import {
   StyledAvatarTitle, 
   StyledAvatarTitleText,
   StyledAntAvatar,
-  StyledAntTag
+  StyledAntTag,
+  StyledTagTimestampBlock
 } from './style';
 
 export function CusPostModal({ 
@@ -74,12 +75,12 @@ export function CusPostModal({
         isError={isError}
         onCancel={onCloseModal}
       >
-        <div>
+        <StyledTagTimestampBlock>
           <StyledAntTag color="#01324e">
             {modalData?.forumName}
           </StyledAntTag>
           { dateTimeString }
-        </div>
+        </StyledTagTimestampBlock>
         { modalData?.content }
       </AntModal>
     );

@@ -36,3 +36,7 @@ export const StyledAntTag = styled(AntTag)`
   margin-right: 10px;
   margin-bottom: 10px;
 `;
+
+export const StyledTagTimestampBlock = styled.div`
+  margin-bottom: 10px;
+`;
