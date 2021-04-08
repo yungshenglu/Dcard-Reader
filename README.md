@@ -2,7 +2,7 @@
 
 ![](./assets/img/Demo.png)
 
-This repository is my first practice to implement a simple post reader for [Dcard](https://www.dcard.tw) using React Hook and TypeScript. For now, you can view the list of the lastest poppular posts, also you can see the content of each post.
+This repository is my first practice to implement a simple post reader for [Dcard](https://www.dcard.tw) using React Hook and TypeScript. For now, you can view the list of the lastest popular posts, also you can see the content of each post.
 
 > HINT: If you have any questions, please feel free to ask me.
 
