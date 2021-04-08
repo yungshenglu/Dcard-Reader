@@ -73,7 +73,7 @@ This repository is my first practice to implement a simple post reader for [Dcar
 
 ### Infinite Scrolling
 
-- Using **Intersection Observer API** to implement infinite scrolling
+- Using **Intersection Observer API** to implement "Lazy Loading"
    - You can see the detail of the implementation [here](./src/views/Home/Home.tsx)
 - The main concept is that we need to *obserse the last item in the list whether is intersect with viewort*.
    - When the last item is intersect with view port, we fetch new post's list after it.
