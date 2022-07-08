@@ -2,7 +2,7 @@
 
 ![](./assets/img/Demo.png)
 
-This repository is my first practice to implement a simple post reader for [Dcard](https://www.dcard.tw) using React Hook and TypeScript. For now, you can view the list of the lastest popular posts, also you can see the content of each post.
+This repository is my first practice to implement a simple post reader for [Dcard](https://www.dcard.tw) using React Hook and TypeScript. For now, you can view the list of the latest popular posts, also you can see the content of each post.
 
 > HINT: If you have any questions, please feel free to ask me.
 
@@ -45,7 +45,7 @@ This repository is my first practice to implement a simple post reader for [Dcar
 - The default of the request mode in Express server is `mode: no-cors`
    - Use [CORS](https://www.npmjs.com/package/cors), a Node package for providing a Connect/Express middleware that can be used to enable CORS with various options
    - You can see the detail of the implementation [here](./app.js)
-- In this repository, we only implement the following two APIs in our server: (The detial is in the following **APIs** section)
+- In this repository, we only implement the following two APIs in our server: (The detail is in the following **APIs** section)
    - `/api/posts&before=:before`: Fetch the list of the posts
    - `/api/post&id=:id`: Fetch the content of the post via post's ID
 
@@ -61,11 +61,11 @@ This repository is my first practice to implement a simple post reader for [Dcar
       - Set the return data into `postList`
       - Set the status of loading into `false`
       - Set the status of having more post into `true` as default
-   - When **scolling to the bottom** of the page, the parameter of `before` will NOT be 0. After getting the response, do the followings:
+   - When **scrolling to the bottom** of the page, the parameter of `before` will NOT be 0. After getting the response, do the followings:
       - Append the new return data after existed `postList`
       - Set the status of loading into `false`
       - Set the status of having more post into `true` as default
-- `useFetchPost`: Fetcg the content the specific post
+- `useFetchPost`: Fetch the content the specific post
    - Encapsulate the hook `useAxios` in [`axios-hooks`](https://www.npmjs.com/package/axios-hooks)
    - The only parameters is `postId` (Number) which is to get the content you want.
    - Set `manual: true` to avoid triggering the API when rendering
@@ -75,10 +75,10 @@ This repository is my first practice to implement a simple post reader for [Dcar
 
 - Using **Intersection Observer API** to implement "Lazy Loading"
    - You can see the detail of the implementation [here](./src/views/Home/Home.tsx)
-- The main concept is that we need to *obserse the last item in the list whether is intersect with viewort*
+- The main concept is that we need to *observe the last item in the list whether is intersect with viewport*
    - When the last item is intersect with view port, we fetch new post's list after it
    - Register the DOM of the last post with **Intersection Observer** each time after fetching the list
-   - Use `useCallback` to setup the callback function when the taget DOM intersects with the viewport and start observing the target
+   - Use `useCallback` to setup the callback function when the target DOM intersects with the viewport and start observing the target
 
 ---
 ## APIs
